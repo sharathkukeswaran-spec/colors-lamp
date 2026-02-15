@@ -1,15 +1,15 @@
 # COLORS - LAMP Stack Web Application
 
-A web-based color palette management tool built using the LAMP (Linux, Apache, MySQL, PHP) stack. Users can log in, add colors to their personal collection, and search through their saved colors.
+A web-based color palette management tool built using the LAMP (Linux, Apache, MySQL, PHP) stack. Users can log in , add colors to their personal collection, and search through theier saved colors.
 
 ## Technologies Used
 
-- **Linux** - Server operating system
-- **Apache** - Web server
-- **MySQL** - Relational database for storing users and colors
-- **PHP** - Server-side scripting for API endpoints
-- **HTML/CSS/JavaScript** - Frontend interface
-- **Google Fonts (Ubuntu)** - Typography
+- Linux
+- Apache
+- MySQL
+- PHP
+- HTML/CSS/JavaScript
+- Google Fonts (Ubuntu)
 
 ## Project Structure
 
@@ -22,7 +22,7 @@ colors-lamp/
 │   └── SearchColors.php      # Search colors by name
 ├── public/
 │   ├── index.html            # Login page
-│   ├── color.html            # Main application page
+│   ├── color.html            # Main application pagee
 │   ├── css/
 │   │   └── styles.css        # Application styles
 │   └── js/
@@ -91,7 +91,7 @@ CREATE TABLE Colors (
 
 5. **Create the database and tables** using the SQL statements in the Prerequisites section.
 
-6. **Insert a test user** into the Users table:
+6. **Insert a test user** into the Userstable:
 
    ```sql
    INSERT INTO Users (firstName, lastName, Login, Password) VALUES ('Test', 'User', 'testuser', 'testpassword');
@@ -99,26 +99,26 @@ CREATE TABLE Colors (
 
 ## How to Run and Access the Application
 
-1. Ensure Apache and MySQL are running on your server.
+1. Ensure Apache andMySQl are running on your server.
 2. Navigate to `http://your-server-address/public/index.html` in a web browser.
 3. Log in with valid credentials.
-4. Once logged in, you will be redirected to the color management page where you can:
+4. Once logged in, you will beredirected to the color management page where you can:
    - **Search colors** - Type a color name (or partial name) and click "Search Color" to find matching entries.
-   - **Add colors** - Type a new color name and click "Add Color" to save it to your collection.
+   - **Add colors** - Type a new color name and click "Add Color" to save it to your collectio
 5. Click "Log Out" to end your session.
 
 ## Assumptions and Limitations
 
 - The application requires a working LAMP server with Apache configured to serve PHP files.
 - Passwords are currently stored and transmitted in plain text (the MD5 hashing library is included but not active).
-- User sessions are managed via browser cookies with a 20-minute expiration.
+  User sessions are managed via browser cookies with a 20-minute expiration.
 - Each user can only search and manage their own colors.
 - The application does not include user registration; users must be added directly to the database.
 - No HTTPS enforcement is configured by default.
 
 ## AI Usage Disclosure
 
-Claude (by Anthropic) was used to assist with organizing the repository structure, sanitizing credentials from source files, and generating this README documentation. The core application logic was developed during COP 4331 lab sessions.
+Claude (by Anthropic) was used with organizing the repository structure, and generating this README documentation. The core application logic was developed during COP 4331 lab session 1 and by my own time.
 
 ## License
 
