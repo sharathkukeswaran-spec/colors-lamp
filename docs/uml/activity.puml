@@ -1,0 +1,26 @@
+@startuml
+skinparam shadowing false
+
+title COLORS - Minimal Activity Diagram
+
+start
+:Open login page;
+
+:Submit credentials;
+
+if (Valid credentials?) then (yes)
+  :Open color page;
+else (no)
+  :Show login error;
+  stop
+endif
+
+repeat
+  :Search or add color;
+repeat while (Continue using app?) is (yes)
+
+:Log out;
+:Return to login page;
+stop
+
+@enduml

@@ -1,0 +1,37 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam shadowing false
+
+title COLORS - Minimal Class Diagram
+
+class CodeJS <<frontend>> {
+  +doLogin() : void
+  +searchColor() : void
+  +addColor() : void
+}
+
+class ColorAPI <<php endpoints>> {
+  +login() : json
+  +searchColors() : json
+  +addColor() : json
+}
+
+class Users <<table>> {
+  +ID : int <<PK>>
+  +Login : varchar(50)
+  +Password : varchar(50)
+}
+
+class Colors <<table>> {
+  +ID : int <<PK>>
+  +UserID : int <<FK>>
+  +Name : varchar(50)
+}
+
+CodeJS ..> ColorAPI : HTTP requests
+ColorAPI ..> Users : validate user
+ColorAPI ..> Colors : read/write colors
+
+Users "1" <-- "0..*" Colors : owns
+
+@enduml

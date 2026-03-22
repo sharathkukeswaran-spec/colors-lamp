@@ -1,0 +1,21 @@
+@startuml
+left to right direction
+skinparam shadowing false
+
+title COLORS - Minimal Use Case Diagram
+
+actor "User" as User
+
+rectangle "COLORS App" {
+  usecase "Log In" as UC_Login
+  usecase "Search Colors" as UC_Search
+  usecase "Add Color" as UC_Add
+  usecase "Log Out" as UC_Logout
+}
+
+User --> UC_Login
+User --> UC_Search
+User --> UC_Add
+User --> UC_Logout
+
+@enduml
