@@ -118,7 +118,7 @@ CREATE TABLE Colors (
 
 ## AI Usage Disclosure
 
-Claude (by Anthropic) was used with organizing the repository structure, and generating this README documentation. The core application logic was developed during COP 4331 lab session 1 and by my own time.
+Claude (by Anthropic) was used with organizing the repository structure, and generating this README documentation. The core application logic was developed during COP 4331 lab session 1 and by my own time. I have also used it for helping me out with Assigment 4.
 
 ## License
 
